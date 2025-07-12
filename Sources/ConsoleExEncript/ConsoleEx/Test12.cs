@@ -8,6 +8,13 @@ namespace ConsoleEx
         // TODO: ВОТ ЭТОТ РАБОЧИЙ        
         private readonly byte[] salt = new byte[8];
 
+        /// <summary>
+        /// Encrypt method
+        /// </summary>
+        /// <param name="originText">Text</param>
+        /// <param name="fileName">For example FileName.bin</param>
+        /// <param name="password">Password</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void EncryptToFile(string originText, string fileName, string password)
         {
             if (string.IsNullOrWhiteSpace(originText)) throw new ArgumentNullException(nameof(originText));
